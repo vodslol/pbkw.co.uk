@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prodbyk1wz</title>
+    <!-- Premium Font & Icon Kits -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
     <style>
-        body { background: #121212; color: #fff; font-family: Arial, sans-serif; text-align: center; padding: 40px 20px; }
-        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #ff007f; }
-        h1 { font-size: 24px; margin: 15px 0 5px 0; }
-        p { color: #888; font-size: 14px; margin-bottom: 30px; }
-        .link-btn { display: block; background: #222; color: #fff; text-decoration: none; padding: 15px; margin: 12px auto; border-radius: 8px; width: 100%; max-width: 400px; border: 1px solid #333; font-weight: bold; transition: 0.2s; }
-        .link-btn:hover { background: #ff007f; border-color: #ff007f; }
+        body { background: #0d0d0d; color: #fff; font-family: 'Poppins', sans-serif; text-align: center; padding: 50px 20px; margin: 0; }
+        .profile-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #ff007f; margin-bottom: 12px; object-fit: cover; box-shadow: 0 0 15px rgba(255, 0, 127, 0.4); }
+        h1 { font-size: 26px; margin: 5px 0; font-weight: 600; letter-spacing: -0.5px; }
+        p { color: #666; font-size: 14px; margin-bottom: 35px; font-weight: 400; }
+        .link-container { max-width: 420px; margin: 0 auto; }
+        .link-btn { display: flex; align-items: center; justify-content: center; background: #161616; color: #fff; text-decoration: none; padding: 16px; margin: 16px auto; border-radius: 14px; width: 100%; box-sizing: border-box; border: 1px solid #222; font-weight: 600; font-size: 16px; transition: all 0.25s ease-in-out; }
+        .link-btn i { margin-right: 10px; font-size: 18px; width: 20px; text-align: center; }
+        .link-btn:hover { background: #fff; color: #000; border-color: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); }
+        
+        /* Specific Brand Colors On Hover */
+        .tiktok-btn:hover { background: #00f2fe; color: #000; border-color: #00f2fe; box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2); }
+        .instagram-btn:hover { background: #f75274; color: #fff; border-color: #f75274; box-shadow: 0 10px 20px rgba(247, 82, 116, 0.2); }
+        .spotify-btn:hover { background: #1db954; color: #000; border-color: #1db954; box-shadow: 0 10px 20px rgba(29, 185, 84, 0.2); }
     </style>
 </head>
 <body>
 
-    <!-- Your Artist Profile -->
+    <!-- Profile Header -->
     <img class="profile-img" src="85bef544e17c77625b6185cc0ef2dc91.jpg" alt="Profile">
     <h1>prodbyk1wz</h1>
-    <p>Official Music & Social Links</p>
+    <p>Official Music & Socials</p>
 
-    <!-- Paste Your Specific Streaming/Social Links Here -->
-    <a class="link-btn" href="https://www.tiktok.com/@k1wz.wav" target="_blank"> Official TikTok</a>
-    <a class="link-btn" href="https://www.instagram.com/prodbyk1wz/" target="_blank"> Official Instagram</a>
-    <a class="link-btn" href="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WAvY_aueQPGQirjk4jC2bg" target="_blank"> Listen on Spotify</a>
+    <!-- Links Container -->
+    <div class="link-container">
+        <a class="link-btn tiktok-btn" href="https://www.tiktok.com/@k1wz.wav" target="_blank">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a class="link-btn instagram-btn" href="https://www.instagram.com/prodbyk1wz/" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a class="link-btn spotify-btn" href="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WAvY_aueQPGQirjk4jC2bg&nd=1&dlsi=b6855baf300b42b8" target="_blank">
+            <i class="fab fa-spotify"></i> Listen on Spotify
+        </a>
+    </div>
 
 </body>
 </html>
