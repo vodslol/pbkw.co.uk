@@ -3,246 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prodbyk1wz | Official Dashboard</title>
+    <title>prodbyk1wz</title>
+    <!-- High-Performance Vector Graphics & Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+        /* Immersive Premium Deep Space Layout */
         body { 
-            background: radial-gradient(circle at top, #140824 0%, #05020a 100%); 
+            background: #060609;
             color: #fff; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Poppins', sans-serif; 
+            text-align: center; 
+            padding: 80px 20px; 
+            margin: 0; 
             min-height: 100vh;
-            padding: 40px 20px; 
-            user-select: none; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        .container {
-            width: 100%;
-            max-width: 440px;
-            text-align: center;
+        /* Pure CSS Matrix Particle Layer */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 0, 127, 0.05), transparent 60%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 162, 255, 0.05), transparent 50%);
+            z-index: 1;
+            pointer-events: none;
         }
+
+        /* Glowing Neon Aura Deck */
         .profile-wrapper {
             position: relative;
             display: inline-block;
-            margin-bottom: 15px;
-        }
-        .profile-img { 
-            width: 110px; 
-            height: 110px; 
-            border-radius: 50%; 
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            object-fit: cover;
-            position: relative;
+            margin-bottom: 25px;
             z-index: 2;
         }
-        .profile-glow {
+        
+        .profile-img { 
+            width: 135px; 
+            height: 135px; 
+            border-radius: 50%; 
+            border: 4px solid transparent;
+            background: linear-gradient(#060609, #060609) padding-box,
+                        linear-gradient(135deg, #ff007f, #00a2ff) border-box;
+            object-fit: cover; 
+            position: relative;
+            z-index: 3;
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Dynamic Vinyl Rotation Effect */
+        .profile-wrapper:hover .profile-img {
+            transform: rotate(360deg) scale(1.05);
+        }
+
+        .ambient-spectrum {
             position: absolute;
-            top: -3px; left: -3px; right: -3px; bottom: -3px;
-            background: linear-gradient(45deg, #ff007f, #7f00ff);
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
             border-radius: 50%;
-            filter: blur(12px);
-            opacity: 0.8;
+            background: linear-gradient(135deg, #ff007f, #00a2ff);
+            filter: blur(20px);
+            opacity: 0.6;
             z-index: 1;
-            animation: pulseGlow 3s ease-in-out infinite alternate;
-        }
-        @keyframes pulseGlow {
-            0% { transform: scale(0.96); opacity: 0.6; }
-            100% { transform: scale(1.04); opacity: 0.9; }
-        }
-        
-        .ascii-container {
-            display: inline-block;
-            margin: 15px auto 25px auto;
-            touch-action: manipulation; 
-            cursor: pointer;
-            transition: transform 0.1s ease;
+            animation: chromaticPulse 3s infinite alternate ease-in-out;
         }
 
-        .ascii-art {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 11px;
-            line-height: 1.2;
-            color: #ff007f;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 15px 25px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            white-space: pre;
-            text-align: left;
-            letter-spacing: 0px;
-            max-width: 100%;
-            overflow-x: auto;
-            transition: border-color 0.2s;
-        }
-        
-        .ascii-container:hover .ascii-art {
-            border-color: rgba(255, 0, 127, 0.3);
+        @keyframes chromaticPulse {
+            0% { transform: scale(0.95); opacity: 0.4; filter: blur(15px); }
+            100% { transform: scale(1.1); opacity: 0.8; filter: blur(25px); }
         }
 
-        .jumping {
-            animation: clickJump 0.4s ease-out;
-        }
-
-        @keyframes clickJump {
-            0% { transform: translateY(0) scaleY(1); }
-            30% { transform: translateY(-35px) scaleY(1.05); } 
-            70% { transform: translateY(0) scaleY(0.95); }    
-            100% { transform: translateY(0) scaleY(1); }
-        }
-
-        h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
-        .subtitle { color: #8a8a93; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
-        
-        /* Spotify Embed Player Container */
-        .spotify-embed-container {
-            margin: 25px 0 15px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #000;
-            line-height: 0;
-        }
-
-        .link-card { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between;
-            background: rgba(255, 255, 255, 0.03); 
-            color: #fff; 
-            text-decoration: none; 
-            padding: 16px 20px; 
-            margin: 14px 0; 
-            border-radius: 14px; 
-            border: 1px solid rgba(255, 255, 255, 0.04); 
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-        .link-card:hover { 
-            background: rgba(255, 255, 255, 0.07); 
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px); 
-        }
-        .card-left { display: flex; align-items: center; text-align: left; }
-        
-        .card-icon { 
-            margin-right: 16px; 
-            width: 24px; 
-            height: 24px; 
+        /* Premium Verified Identity Typography */
+        .identity-banner {
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 12px;
+            margin: 5px 0;
+            z-index: 2;
         }
-        .card-icon svg { width: 100%; height: 100%; }
-        
-        /* Brand Icon Hex Colors */
-        .tiktok-icon { fill: #00f2fe; filter: drop-shadow(2px 0px 0px #fe0979); }
-        .insta-icon { fill: url(#insta-gradient); }
-        .spotify-icon { fill: #1DB954; }
-        .yt-icon { fill: #FF0000; }
-        .vinyl-icon { fill: #a855f7; }
-        .email-icon { fill: #ff007f; }
 
-        .card-title { font-size: 15px; font-weight: 600; margin-bottom: 1px; }
-        .card-sub { color: #66666e; font-size: 13px; }
+        h1 { 
+            font-size: 34px; 
+            margin: 0; 
+            font-weight: 900; 
+            letter-spacing: -1px; 
+            background: linear-gradient(to right, #ffffff 30%, #a3a3a3 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
         
-        .action-btn {
-            background: rgba(255, 255, 255, 0.06);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #d4d4d8;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.2s;
+        .verified-tick {
+            color: #00a2ff;
+            font-size: 24px;
+            animation: neonGlow 2.5s ease-in-out infinite alternate;
         }
-        .link-card:hover .action-btn {
-            background: #fff;
-            color: #05020a;
-            border-color: #fff;
+
+        @keyframes neonGlow {
+            0% { filter: drop-shadow(0 0 2px rgba(0, 162, 255, 0.5)); transform: scale(1); }
+            100% { filter: drop-shadow(0 0 14px rgba(0, 162, 255, 1)); transform: scale(1.05); }
         }
+
+        subtext { 
+            display: block;
+            color: #666a78; 
+            font-size: 13px; 
+            margin-bottom: 45px; 
+            font-weight: 700; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            z-index: 2;
+        }
+        
+        .audio-deck { width: 100%; max-width: 440px; margin: 0 auto; z-index: 2; }
+        
+        /* Frosted Glass Cyber-Responsive Modules */
+        .deck-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background: rgba(13, 13, 18, 0.6); 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 22px 28px; 
+            margin: 22px auto; 
+            border-radius: 24px; 
+            width: 100%; 
+            box-sizing: border-box; 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            font-weight: 700; 
+            font-size: 16px; 
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.15, 1, 0.3, 1); 
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Kinetic Wave Staggered Floating */
+        .deck-row { animation: structuralFloat 5s ease-in-out infinite; }
+        .deck-row:nth-child(1) { animation-delay: 0s; }
+        .deck-row:nth-child(2) { animation-delay: 0.4s; }
+        .deck-row:nth-child(3) { animation-delay: 0.8s; }
+        .deck-row:nth-child(4) { animation-delay: 1.2s; }
+        .deck-row:nth-child(5) { animation-delay: 1.6s; }
+
+        @keyframes structuralFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .label-wrap { display: flex; align-items: center; }
+        .label-wrap .sub-label { display: block; font-size: 11px; color: #666a78; font-weight: 500; text-align: left; transition: color 0.3s; }
+        .label-text-container { display: flex; flex-direction: column; align-items: flex-start; }
+        .deck-row i { margin-right: 18px; font-size: 24px; width: 28px; text-align: center; transition: transform 0.3s; }
+        
+        /* Adaptive Laser Prism Sweeper */
+        .deck-row::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-35deg);
+            animation: prismSweep 6s infinite ease-in-out;
+        }
+        @keyframes prismSweep {
+            0% { left: -100%; }
+            25% { left: 180%; }
+            100% { left: 180%; }
+        }
+
+        .status-pill { font-size: 11px; background: rgba(255, 255, 255, 0.05); padding: 6px 14px; border-radius: 40px; color: #767a8a; letter-spacing: 0.8px; text-transform: uppercase; font-weight: 800; border: 1px solid rgba(255,255,255,0.03); transition: all 0.3s; }
+
+        /* Dynamic Kinetic Overrides */
+        .deck-row:hover { 
+            transform: translateY(-8px) scale(1.04) !important; 
+            color: #000;
+            border-color: transparent;
+            animation-play-state: paused;
+        }
+        .deck-row:hover i { transform: scale(1.15); }
+        .deck-row:hover .status-pill { background: rgba(0, 0, 0, 0.15); color: #000; font-weight: 900; }
+        .deck-row:hover .sub-label { color: #222; }
+
+        /* Cyber Neon Focus Profiles */
+        .tok-row:hover { background: #00f2fe; box-shadow: 0 25px 50px rgba(0, 242, 254, 0.45); }
+        .insta-row:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; box-shadow: 0 25px 50px rgba(220, 39, 67, 0.45); }
+        .insta-row:hover .status-pill { color: #fff; background: rgba(255,255,255,0.2); }
+        .insta-row:hover .sub-label { color: rgba(255,255,255,0.7); }
+        .spot-row:hover { background: #1db954; box-shadow: 0 25px 50px rgba(29, 185, 84, 0.45); }
+        .yt-row:hover { background: #ff0000; box-shadow: 0 25px 50px rgba(255, 0, 0, 0.45); color: #fff; }
+        .yt-row:hover .status-pill { color: #fff; background: rgba(255,255,255,0.2); }
+        .yt-row:hover .sub-label { color: rgba(255,255,255,0.7); }
+        .mail-row:hover { background: #ff007f; box-shadow: 0 25px 50px rgba(255, 0, 127, 0.45); color: #fff; }
+        .mail-row:hover .status-pill { color: #fff; background: rgba(255,255,255,0.2); }
+        .mail-row:hover .sub-label { color: rgba(255,255,255,0.7); }
     </style>
 </head>
 <body>
 
-    <svg style="width:0; height:0; position:absolute;">
-        <radialGradient id="insta-gradient" r="150%" cx="30%" cy="100%">
-            <stop offset="0%" stop-color="#fdf497" />
-            <stop offset="5%" stop-color="#fdf497" />
-            <stop offset="45%" stop-color="#fd5949" />
-            <stop offset="60%" stop-color="#d6249f" />
-            <stop offset="90%" stop-color="#285AEB" />
-        </radialGradient>
-    </svg>
-
-    <div class="container">
-        <!-- Pulse Glow Profile Cover -->
-        <div class="profile-wrapper">
-            <div class="profile-glow"></div>
-            <img class="profile-img" src="85bef544e17c77625b6185cc0ef2dc91.jpg" alt="Profile">
-        </div>
+    <!-- Kinetic Profile Structure -->
+    <div class="profile-wrapper">
+        <div class="ambient-spectrum"></div>
+        <img class="profile-img" src="85bef544e17c77625b6185cc0ef2dc91.jpg" alt="Profile">
+    </div>
+    
+    
+    
         <h1>prodbyk1wz</h1>
-        <div class="subtitle">Official Music Dashboard</div>
+        <i class="fas fa-circle-check verified-tick" title="Verified Professional"></i>
+    </div>
+    <subtext>Official Music Dashboard</subtext>
 
-        <!-- Clickable Monospace ASCII Cat Block -->
-        <div class="ascii-container" id="cat-box">
-            <pre class="ascii-art">
-   /\_/\  
-  ( o.o ) 
-   > ^ <  
-            </pre>
-        </div>
-
-        <!-- Live Spotify Music Embed Player -->
-        <div class="spotify-embed-container">
-            <iframe src="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WLGfUwEeTDGfkISNnjqdOg" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
-        <!-- TikTok Card -->
-        <a class="link-card" href="https://www.tiktok.com/@k1wz.wav" target="_blank">
-            <div class="card-left">
-                <div class="card-icon tiktok-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.6 4.23.93.93 2.17 1.51 3.48 1.67V9.77c-1.1-.11-2.18-.51-3.11-1.12-.62-.4-1.16-.92-1.6-1.52-.03 2.82-.01 5.64-.02 8.46-.02 1.34-.37 2.69-1.07 3.82-.84 1.25-2.19 2.14-3.66 2.45-1.5.33-3.13.1-4.48-.66-1.42-.78-2.42-2.25-2.69-3.84-.33-1.69.05-3.5 1.05-4.88 1.13-1.47 2.99-2.31 4.85-2.22.01 1.45-.01 2.9.01 4.35-1-.07-2.07.38-2.61 1.25-.56.84-.46 2.05.25 2.76.69.65 1.77.72 2.53.16.51-.35.8-.95.82-1.57-.02-3.19-.01-6.38-.01-9.57z"/></svg>
-                </div>
-                <div>
-                    <div class="card-title">TikTok</div>
-                    <div class="card-sub">@k1wz.wav</div>
-                </div>
-            </div>
-            <span class="action-btn">Launch</span>
+    <!-- Interactive Navigation Decks -->
+    <div class="audio-deck">
+        <a class="deck-row tok-row" href="https://www.tiktok.com/@k1wz.wav" target="_blank">
+            <span class="label-wrap">
+                <i class="fab fa-tiktok"></i>
+                <span class="label-text-container">
+                    <span>TikTok</span>
+                    <span class="sub-label">@k1wz.wav</span>
+                </span>
+            </span>
+            <span class="status-pill">Launch</span>
         </a>
-
-        <!-- Instagram Card -->
-        <a class="link-card" href="https://www.instagram.com/prodbyk1wz/" target="_blank">
-            <div class="card-left">
-                <div class="card-icon insta-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                </div>
-                <div>
-                    <div class="card-title">Instagram</div>
-                    <div class="card-sub">@prodbyk1wz</div>
-                </div>
-            </div>
-            <span class="action-btn">Follow</span>
+        <a class="deck-row insta-row" href="https://www.instagram.com/prodbyk1wz/" target="_blank">
+            <span class="label-wrap">
+                <i class="fab fa-instagram"></i>
+                <span class="label-text-container">
+                    <span>Instagram</span>
+                    <span class="sub-label">@prodbyk1wz</span>
+                </span>
+            </span>
+         </a>
+        <a class="deck-row spot-row" href="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WAvY_aueQPGQirjk4jC2bg&nd=1&dlsi=b6855baf300b42b8" target="_blank">
+            <span class="label-wrap">
+                <i class="fab fa-spotify"></i>
+                <span class="label-text-container">
+                    <span>Spotify</span>
+                    <span class="sub-label">Artist Profile</span>
+                </span>
+            </span>
+            <span class="status-pill">Stream</span>
         </a>
-
-        <!-- Spotify Card -->
-        <a class="link-card" href="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WLGfUwEeTDGfkISNnjqdOg" target="_blank">
-            <div class="card-left">
-                <div class="card-icon spotify-icon">
-                            <!-- YouTube Card -->
-        <a class="link-card" href="https://www.youtube.com/channel/UC1dnAt6mo6SKd1gVZYWvm8g" target="_blank">
-            <div class="card-left">
-                <div class="card-icon yt-icon">
-                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </div>
-                <div>
-                    <div class="card-title">YouTube</div>
-                    <div class="card-sub">Official Channel</div>
-                </div>
-            </div>
-            <span class="action-btn">Watch</span>
+        <a class="deck-row yt-row" href="https://www.youtube.com/channel/UC1dnAt6mo6SKd1gVZYWvm8g" target="_blank">
+            <span class="label-wrap">
+                <i class="fab fa-youtube"></i>
+                <span class="label-text-container">
+                    <span>YouTube</span>
+                    <span class="sub-label">Official Channel</span>
+                </span>
+            </span>
+            <span class="status-pill">Watch</span>
         </a>
+        <a class="deck-row mail-row" href="mailto:prodbyk1wz@pbkw.co.uk">
+            <span class="label-wrap">
+                <i class="fas fa-envelope"></i>
+                <span class="label-text-container">
+                    <span>Inquiries</span>
+                    <span class="sub-label">prodbyk1wz@pbkw.co.uk</span>
+                </span>
+            </span>
+            <span class="status-pill">Contact</span>
+        </a>
+    </div>
+
+</body>
+</html>   
