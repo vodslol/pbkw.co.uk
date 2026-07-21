@@ -96,6 +96,15 @@
         h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
         .subtitle { color: #8a8a93; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
         
+        /* Spotify Embed Player Container */
+        .spotify-embed-container {
+            margin: 25px 0 15px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            line-height: 0;
+        }
+
         .link-card { 
             display: flex; 
             align-items: center; 
@@ -133,6 +142,7 @@
         .spotify-icon { fill: #1DB954; }
         .yt-icon { fill: #FF0000; }
         .vinyl-icon { fill: #a855f7; }
+        .email-icon { fill: #ff007f; }
 
         .card-title { font-size: 15px; font-weight: 600; margin-bottom: 1px; }
         .card-sub { color: #66666e; font-size: 13px; }
@@ -158,7 +168,6 @@
 </head>
 <body>
 
-    <!-- Radial Setup for Instagram Pink/Blue Icon Gradient -->
     <svg style="width:0; height:0; position:absolute;">
         <radialGradient id="insta-gradient" r="150%" cx="30%" cy="100%">
             <stop offset="0%" stop-color="#fdf497" />
@@ -173,8 +182,7 @@
         <!-- Pulse Glow Profile Cover -->
         <div class="profile-wrapper">
             <div class="profile-glow"></div>
-            <!-- Custom Anime Avatar Profile Image -->
-            <img class="profile-img" src="85bef544e17c77625b6185cc0ef2dc91.jpg" alt="Profile">
+            <img class="profile-img" src="https://solo.to" alt="Profile">
         </div>
         <h1>prodbyk1wz</h1>
         <div class="subtitle">Official Music Dashboard</div>
@@ -188,8 +196,13 @@
             </pre>
         </div>
 
+        <!-- Live Spotify Music Embed Player -->
+        <div class="spotify-embed-container">
+            <iframe src="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WLGfUwEeTDGfkISNnjqdOg" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
         <!-- TikTok Card -->
-        <a class="link-card" href="https://www.tiktok.com/@k1wz.wav" target="_blank">
+        <a class="link-card" href="https://tiktok.com" target="_blank">
             <div class="card-left">
                 <div class="card-icon tiktok-icon">
                     <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.6 4.23.93.93 2.17 1.51 3.48 1.67V9.77c-1.1-.11-2.18-.51-3.11-1.12-.62-.4-1.16-.92-1.6-1.52-.03 2.82-.01 5.64-.02 8.46-.02 1.34-.37 2.69-1.07 3.82-.84 1.25-2.19 2.14-3.66 2.45-1.5.33-3.13.1-4.48-.66-1.42-.78-2.42-2.25-2.69-3.84-.33-1.69.05-3.5 1.05-4.88 1.13-1.47 2.99-2.31 4.85-2.22.01 1.45-.01 2.9.01 4.35-1-.07-2.07.38-2.61 1.25-.56.84-.46 2.05.25 2.76.69.65 1.77.72 2.53.16.51-.35.8-.95.82-1.57-.02-3.19-.01-6.38-.01-9.57z"/></svg>
@@ -220,7 +233,16 @@
         <a class="link-card" href="https://open.spotify.com/artist/14J3DkoueWZZ2d1rNBPTMq?si=WLGfUwEeTDGfkISNnjqdOg" target="_blank">
             <div class="card-left">
                 <div class="card-icon spotify-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.494 17.307c-.213.35-.672.463-1.02.249-2.864-1.75-6.471-2.146-10.718-1.177-.402.093-.805-.16-.897-.562-.093-.403.161-.805.562-.897 4.653-1.064 8.629-.611 11.825 1.34.348.214.462.673.248 1.018zm1.467-3.265c-.269.437-.843.58-1.28.311-3.279-2.015-8.28-2.601-12.16-1.422-.493.15-1.015-.129-1.164-.622-.15-.493.13-1.015.622-1.164 4.435-1.347 9.941-.699 13.672 1.593.439.27.581.843.31 1.282zm.127-3.411c-3.933-2.336-10.423-2.551-14.195-1.405-.603.184-1.242-.152-1.425-.756-.184-.603.152-1.242.756-1.425 4.337-1.317 11.491-1.069 16.012 1.614.542.322.719 1.022.396 1.564-.323.542-1.022.72-1.564.396z"/></svg>
+                            <!-- YouTube Card -->
+        <a class="link-card" href="https://youtube.com" target="_blank">
+            <div class="card-left">
+                <div class="card-icon yt-icon">
+                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </div>
                 <div>
-                    <div class="card-title">Spotify</div>
+                    <div class="card-title">YouTube</div>
+                    <div class="card-sub">Official Channel</div>
+                </div>
+            </div>
+            <span class="action-btn">Watch</span>
+        </a>
